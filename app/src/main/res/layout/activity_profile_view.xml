@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stock1"
+    tools:context=".account_detail.ProfileViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_header2"
+            android:padding="6dp">
+
+            <include
+                layout="@layout/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_header"
+            android:fillViewport="true"
+            android:isScrollContainer="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhiteTransparent">
+
+                <RelativeLayout
+                    android:id="@+id/colorlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/colorHeaderStart"></RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:id="@+id/linerlayouy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/side_nav_bar"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:padding="0dp"
+                            android:visibility="gone"
+                            app:civ_border_color="#FF244125"
+                            app:civ_border_width="2dp"
+                            app:srcCompat="@drawable/ic_nav_circle_user" />
+
+                        <ImageView
+                            android:id="@+id/imageView_user"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:foregroundGravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/user_icone" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imageView_user"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_Pusername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/croissant_one"
+                                android:padding="5dp"
+                                android:text="@string/nav_header_title"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Puseremail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_Pusername"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/alike_angular"
+                                android:padding="5dp"
+                                android:text="@string/nav_header_subtitle"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Puserekvc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_Puseremail"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/alike_angular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="PAN:- ASFWS778"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Pusereview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_Puserekvc"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/alike_angular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="KYC:- Yes"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_Puserincome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_Pusereview"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/alike_angular"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Annual Income (₹): 100000"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardview3"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardBackgroundColor="@color/colorWhiteTransparent"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/croissant_one"
+                            android:text="Primary Bank Information"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Name of the Bank:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Account Type:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Mode of Holding:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="1st Account Holder Name:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="2nd Account Holder Name:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Branch Address:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="IFSC Code:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Account Number:"
+                            android:textColor="@color/colorBlack" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardview"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardBackgroundColor="@color/colorWhiteTransparent"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/croissant_one"
+                            android:text="Address Information"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Address Line 1:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Address Line 2:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Country:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="City/Location:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Mobile:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Email:"
+                            android:textColor="@color/colorBlack" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/alike_angular"
+                            android:text="Pincode:"
+                            android:textColor="@color/colorBlack" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
