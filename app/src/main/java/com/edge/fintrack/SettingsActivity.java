@@ -68,19 +68,19 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
                 break;
             case R.id.tv_aboutus:
-                //intentWebView.putExtra("url", "http://fintrackindia.com/about-us.html");
-               /* intentWebView.putExtra("url", "https://www.google.com/");
-                startActivity(intentWebView);*/
-                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fintrackindia.com/about-us.html"));
-                startActivity(browserIntent);
+                intentWebView.putExtra("url", "http://fintrackindia.com/about-us.html");
+               // intentWebView.putExtra("url", "https://www.google.com/");
+                startActivity(intentWebView);
+                /*browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fintrackindia.com/about-us.html"));
+                startActivity(browserIntent);*/
                 overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
                 break;
             case R.id.tv_privacy_policy:
-                // intentWebView.putExtra("url", "http://fintrackindia.com/privacy.html");
-                /*intentWebView.putExtra("url", "https://www.google.com/");
-                startActivity(intentWebView);*/
-                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fintrackindia.com/privacy.html"));
-                startActivity(browserIntent);
+                intentWebView.putExtra("url", "http://fintrackindia.com/privacy.html");
+                //intentWebView.putExtra("url", "https://www.google.com/");
+                startActivity(intentWebView);
+                /*browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fintrackindia.com/privacy.html"));
+                startActivity(browserIntent);*/
                 overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
                 break;
             case R.id.tv_logout:

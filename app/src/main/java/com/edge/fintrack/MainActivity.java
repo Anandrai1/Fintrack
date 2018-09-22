@@ -1,5 +1,6 @@
 package com.edge.fintrack;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -344,6 +345,12 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intentProfileView);
                 overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
                 break;
+            case R.id.nav_home:
+                FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+                // tx.replace(R.id.content_frame, new ProductFragment());
+                tx.replace(R.id.content_frame, new DeshboardFragment());
+                tx.commit();
+                break;
             case R.id.nav_investor:
                 Toast.makeText(this, "This Functionality will be update soon", Toast.LENGTH_SHORT).show();
                /* intentUpdateProfile.putExtra("layout", "layout_investor");
@@ -561,6 +568,7 @@ public class MainActivity extends AppCompatActivity
         super.onResume();
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class getProfilePhoto extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -622,6 +630,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class updateProfileCallWS extends AsyncTask<Void, Void, Void> {
         File imageString;
 

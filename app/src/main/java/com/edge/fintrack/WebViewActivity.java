@@ -1,5 +1,6 @@
 package com.edge.fintrack;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -27,6 +28,7 @@ public class WebViewActivity extends AppCompatActivity {
     private WebView mWebview;
     private ProgressDialog mProgressDialog;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
