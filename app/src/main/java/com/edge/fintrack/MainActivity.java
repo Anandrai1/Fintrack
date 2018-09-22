@@ -39,6 +39,7 @@ import com.edge.fintrack.account_detail.ProfileViewActivity;
 import com.edge.fintrack.account_detail.UpdateProfileActivity;
 import com.edge.fintrack.calculator.CalculatorActivity;
 import com.edge.fintrack.ckyc.CkycUpdateActivity;
+import com.edge.fintrack.dashboard.DeshboardFragment;
 import com.edge.fintrack.product.ProductFragment;
 import com.squareup.picasso.Picasso;
 
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity
     Button bt_portfolio, bt_product;
     SoapPrimitive resultString;
     String imageString;
-
+    CircleImageView imageView_profile_image;
     private int numberOfLines = 1;
     private int maxNumberOfLines = 4;
     private int numberOfPoints = 12;
@@ -98,12 +99,10 @@ public class MainActivity extends AppCompatActivity
     private File destination = null;
     private InputStream inputStreamImg;
     private String imgPath = null;
-
     private Image bgImage;
     private TextView tv_username, textViewEmail;
     private String Registration_Id;
     private ProgressDialog mProgressDialog;
-    CircleImageView imageView_profile_image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -190,7 +189,8 @@ public class MainActivity extends AppCompatActivity
         //iv_more_menu_item.setOnClickListener(listener);
 
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.content_frame, new ProductFragment());
+        // tx.replace(R.id.content_frame, new ProductFragment());
+        tx.replace(R.id.content_frame, new DeshboardFragment());
         tx.commit();
         mContext = getApplicationContext();
         Constant.STORAGEPermission(MainActivity.this);

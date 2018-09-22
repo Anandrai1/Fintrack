@@ -8,12 +8,16 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
@@ -42,6 +46,7 @@ public class SignUpActivity extends AppCompatActivity {
     RequestQueue queue;
     SessionManager session;
     SoapPrimitive resultString;
+    CheckBox ck_tram;
     private ProgressDialog mProgressDialog;
 
     @Override
@@ -67,6 +72,11 @@ public class SignUpActivity extends AppCompatActivity {
                 scrollview.fullScroll(ScrollView.FOCUS_UP);
             }
         });
+
+        ck_tram = (CheckBox) findViewById(R.id.ck_tram);
+        TextView tv_by_continuing = (TextView) findViewById(R.id.tv_by_continuing_str);
+        tv_by_continuing.setText(Html.fromHtml(getString(R.string.privacy_term)));
+        tv_by_continuing.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     /**
@@ -85,7 +95,7 @@ public class SignUpActivity extends AppCompatActivity {
             OpenCustomerAccountCallWS task = new OpenCustomerAccountCallWS();
             task.execute();
         }
-       /* Intent intentMain = new Intent(SignUpActivity.this, SignUp2Activity.class);
+        /* Intent intentMain = new Intent(SignUpActivity.this, SignUp2Activity.class);
         intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intentMain.putExtra("RegistrationId", "446446416161");
         startActivity(intentMain);

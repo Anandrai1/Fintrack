@@ -180,17 +180,6 @@
      "<a href="http://fintrackindia.com/privacy.html" style="color:gray"/> Privacy Policy </a>"]]>
     </string>
 
-    <string name="slide_1_title">Verify age</string>
-    <string name="by_continuing_str2"> <![CDATA[By selecting “get started” below you certify that you are at least 21 years of age &amp; agree to the <a href="https://go.test.com" style="color:gray"/> Terms &amp; condition </a> and <a href="https://go.test.com" style="color:gray"/>Services Agreement.]]></string>
-
-    <string name="slide_1_desc1"> <![CDATA[BY SELECTING "YES, I AM 21" BELOW, YOU CERTIFY THAT YOU ARE AT LEAST 21 YEARS OF AGE AND AGREE TO THE"
-     "<a href="https://go.test.com" style="color:gray"/> TERMS &amp; CONDITIONS </a> OF THE MILWAUKEE BEER WEEK APP. IF YOU ARE NOT 21 YEARS OF AGE, PLEASE CLOSE THE APPLICATION. MILWAUKEE BEER WEEK AND ITS AFFILIATES DO NOT PROMOTE UNDERAGE DRINKING. PLEASE DRINK RESPONSIBLY."]]>
-    </string>
-
-    <string name="slide_1_desc2">
-     <![CDATA[BY SELECTING <a href="http://www.milwaukeebeerweek.com" style="color:gray"/> TERMS &amp; CONDITIONS </a> ]]>
-    </string>
-
     <string-array name="item_list">
         <item>Item1</item>
         <item>Item2</item>
@@ -317,10 +306,6 @@
         <item>5,00,000</item>
     </string-array>
 
-    <!--<asp:ListItem Text="Resident Individual" Value="01"></asp:ListItem>
-                        <asp:ListItem Text="Non Resident Indian" Value="02"></asp:ListItem>
-                        <asp:ListItem Text="Foreign National" Value="03"></asp:ListItem>
-                        <asp:ListItem Text="Person of Indian Origin" Value="04"></asp:ListItem>-->
 
     <string-array name="occupation_type_list">
         <item>Select</item>

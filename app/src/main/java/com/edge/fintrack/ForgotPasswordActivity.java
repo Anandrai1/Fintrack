@@ -41,7 +41,6 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     /**
      * Making notification bar transparent
      */
-
     private void changeStatusBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
