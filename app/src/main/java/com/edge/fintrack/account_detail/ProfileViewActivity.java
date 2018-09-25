@@ -1,5 +1,6 @@
 package com.edge.fintrack.account_detail;
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -210,6 +211,7 @@ public class ProfileViewActivity extends AppCompatActivity {
         tv_pincode.setText("Pincode :- " + user.get(SessionManager.KEY_Zip_Communication));
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class getProfilePhoto extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -273,6 +275,7 @@ public class ProfileViewActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class UserprofilegCallWS extends AsyncTask<Void, Void, Void> {
         String UserId;
 

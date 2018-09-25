@@ -52,7 +52,7 @@ public class SearchFundsFragment extends Fragment {
 
     RecyclerView recyclerView;
     FoldingLayoutAdapter adapter;
-    List<model_fund_list> heroList;
+    List<Model_fund_list> heroList;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -103,7 +103,7 @@ public class SearchFundsFragment extends Fragment {
         heroList = new ArrayList<>();
 
         for (int i = 0; i < array.length; i++) {
-            model_fund_list hero = new model_fund_list(
+            Model_fund_list hero = new Model_fund_list(
                     array[i],
                     "MutualFund",
                     "MutualFund",
@@ -141,7 +141,7 @@ public class SearchFundsFragment extends Fragment {
                             for (int i = 0; i < 7; i++) {
                                 JSONObject obj = jsonArray.getJSONObject(i);
 
-                               /* model_fund_list hero = new model_fund_list(
+                               /* Model_fund_list hero = new Model_fund_list(
                                         obj.getString("name"),
                                         obj.getString("realname"),
                                         obj.getString("team"),
@@ -152,7 +152,7 @@ public class SearchFundsFragment extends Fragment {
                                         obj.getString("bio")
                                 );*/
 
-                                model_fund_list hero = new model_fund_list(
+                                Model_fund_list hero = new Model_fund_list(
                                         "MutualFund",
                                         "MutualFund",
                                         "MutualFund",

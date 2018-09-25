@@ -335,6 +335,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         int id = item.getItemId();
         Intent intentUpdateProfile = new Intent(MainActivity.this, UpdateProfileActivity.class);
         Intent intentCalculatorActivity = new Intent(MainActivity.this, CalculatorActivity.class);
@@ -346,9 +347,11 @@ public class MainActivity extends AppCompatActivity
                 overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
                 break;
             case R.id.nav_home:
-                FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-                // tx.replace(R.id.content_frame, new ProductFragment());
                 tx.replace(R.id.content_frame, new DeshboardFragment());
+                tx.commit();
+                break;
+            case R.id.nav_product:
+                tx.replace(R.id.content_frame, new ProductFragment());
                 tx.commit();
                 break;
             case R.id.nav_investor:

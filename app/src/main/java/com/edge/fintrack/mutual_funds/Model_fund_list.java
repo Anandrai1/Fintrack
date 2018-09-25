@@ -1,10 +1,10 @@
 package com.edge.fintrack.mutual_funds;
 
-public class model_fund_list {
+public class Model_fund_list {
 
     private String name, realName, team, firstAppearance, createdBy, publisher, imageUrl, bio;
 
-    public model_fund_list(String name, String realName, String team, String firstAppearance, String createdBy, String publisher, String imageUrl, String bio) {
+    public Model_fund_list(String name, String realName, String team, String firstAppearance, String createdBy, String publisher, String imageUrl, String bio) {
         this.name = name;
         this.realName = realName;
         this.team = team;

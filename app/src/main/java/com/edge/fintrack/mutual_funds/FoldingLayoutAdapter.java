@@ -18,10 +18,10 @@ import java.util.List;
 public class FoldingLayoutAdapter extends RecyclerView.Adapter<FoldingLayoutAdapter.HeroViewHolder> {
 
     private static int currentPosition = -1;
-    private List<model_fund_list> heroList;
+    private List<Model_fund_list> heroList;
     private Context context;
 
-    public FoldingLayoutAdapter(List<model_fund_list> heroList, Context context) {
+    public FoldingLayoutAdapter(List<Model_fund_list> heroList, Context context) {
         this.heroList = heroList;
         this.context = context;
     }
@@ -34,7 +34,7 @@ public class FoldingLayoutAdapter extends RecyclerView.Adapter<FoldingLayoutAdap
 
     @Override
     public void onBindViewHolder(final HeroViewHolder holder, final int position) {
-        model_fund_list hero = heroList.get(position);
+        Model_fund_list hero = heroList.get(position);
         holder.textViewName.setText(hero.getName());
        /* holder.textViewRealName.setText(hero.getRealName());
         holder.textViewTeam.setText(hero.getTeam());
